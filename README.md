@@ -33,7 +33,7 @@ A monocular SLAM pipeline optimised for monochromatic cameras, combining:
 
 ## Repository Structure
 ├── config/
-│   └── turtlebot3_waffle.yaml      # Camera calibration (640x480, fx=403)
+│   └── turtlebot3_waffle.yaml      # Camera calibration (640x480, fx=403)\n
 ├── ros_nodes/
 │   ├── clahe_node.py               # CLAHE preprocessing node
 │   ├── loop_closure_node.py        # ResNet18 loop closure
