@@ -32,21 +32,24 @@ A monocular SLAM pipeline optimised for monochromatic cameras, combining:
 ---
 
 ## Repository Structure
+
+```
 ├── config/
-│   └── turtlebot3_waffle.yaml      # Camera calibration (640x480, fx=403)\n
+│   └── turtlebot3_waffle.yaml
 ├── ros_nodes/
-│   ├── clahe_node.py               # CLAHE preprocessing node
-│   ├── loop_closure_node.py        # ResNet18 loop closure
-│   ├── loop_closure_dino.py        # DINO ViT loop closure
-│   └── ros_mono.cc                 # Modified ORB-SLAM3 ROS wrapper
+│   ├── clahe_node.py
+│   ├── loop_closure_node.py
+│   ├── loop_closure_dino.py
+│   └── ros_mono.cc
 ├── evaluation/
-│   └── apply_clahe_tum.py          # Apply CLAHE to TUM dataset
+│   └── apply_clahe_tum.py
 ├── results/
-│   ├── results_baseline.txt        # Baseline trajectory
-│   ├── results_clahe.txt           # CLAHE trajectory
-│   └── ...                         # Multiple run results
+│   ├── results_baseline.txt
+│   ├── results_clahe.txt
+│   └── ...
 └── docs/
-└── setup.md                        # Environment setup guide
+    └── setup.md
+```
 ---
 
 ## Environment
