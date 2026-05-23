@@ -117,17 +117,17 @@ pip3 install torch torchvision timm evo
 ### Launch Pipeline
 
 ```bash
-# ResNet18 loop closure
 chmod +x scripts/launch.sh
 ./scripts/launch.sh
+```
 
-# DINO ViT loop closure
-chmod +x scripts/launch_dino.sh
-./scripts/launch_dino.sh
-
-# Side-by-side comparison (both running simultaneously)
-chmod +x scripts/launch_comparison.sh
-./scripts/launch_comparison.sh
+To switch between ResNet18 and DINO ViT, open `scripts/launch.sh` and change:
+```bash
+python3 ~/mono-slam-cnn-loop-closure/ros_nodes/loop_closure_node.py
+```
+to:
+```bash
+python3 ~/mono-slam-cnn-loop-closure/ros_nodes/loop_closure_dino.py
 ```
 
 ### TUM Evaluation
