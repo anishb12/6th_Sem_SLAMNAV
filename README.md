@@ -327,8 +327,8 @@ Pre-computed trajectory files for all runs are in `results/`.
 │   └── results_fr2_clahe.txt       fr2/xyz CLAHE trajectory
 ├── figures/                        All result charts and diagrams
 └── docs/
-    ├── SLAM_Report_With_Figures.docx
-    └── SLAM_Final_Presentation_v2.pptx
+    ├── SLAM_Report.docx
+    └── SLAM_Final_Presentation.pptx
 ```
 
 ---
