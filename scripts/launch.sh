@@ -39,12 +39,18 @@ gnome-terminal --title="ORB-SLAM3" -- bash -c "
     exec bash" &
 sleep 5
 
-# Terminal 5 — Loop closure (resnet18 or dino)
+# Terminal 5 — Loop closure
 if [ "$MODE" = "dino" ]; then
     gnome-terminal --title="Loop Closure - DINO ViT" -- bash -c "
         source /opt/ros/noetic/setup.bash
         source ~/cv_bridge_ws/devel/setup.bash
         python3 ~/mono-slam-cnn-loop-closure/ros_nodes/loop_closure_dino.py;
+        exec bash" &
+elif [ "$MODE" = "efficientnet" ]; then
+    gnome-terminal --title="Loop Closure - EfficientNet-B0" -- bash -c "
+        source /opt/ros/noetic/setup.bash
+        source ~/cv_bridge_ws/devel/setup.bash
+        python3 ~/mono-slam-cnn-loop-closure/ros_nodes/loop_closure_efficientnet.py;
         exec bash" &
 else
     gnome-terminal --title="Loop Closure - ResNet18" -- bash -c "
@@ -63,4 +69,4 @@ gnome-terminal --title="Teleop" -- bash -c "
     exec bash" &
 
 echo "All nodes launched."
-echo "Usage: ./launch.sh [dino]"
+echo "Usage: ./launch.sh [dino|efficientnet]"
